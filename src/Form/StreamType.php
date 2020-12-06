@@ -47,7 +47,7 @@ class StreamType extends AbstractType
 				'attr' => ['class' => 'datepicker'],
 				'label' => 'Date of streaming',
 			])
-			
+
 			->add('save', SubmitType::class, [
 				'label' => $this->translator->trans('default.action.save', [], 'admin'),
 				'attr' => ['class' => 'btn right'],
