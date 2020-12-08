@@ -21,12 +21,9 @@ class UserTest extends TestCase
 
 	public function testSetAdminRole()
 	{
-		$user = new User();
+		$user = $this->createMock(User::class)->setRoles([User::ROLE_DEFAULT]);
 
-		$user->setRoles([User::ROLE_ADMIN]);
-
-		$this->assertSame([User::ROLE_ADMIN, User::ROLE_DEFAULT], $user->getRoles());
-
+		$this->assertSame([], $user->getRoles());
 	}
 
 	public function testSetDisplayName()
