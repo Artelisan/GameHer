@@ -153,9 +153,6 @@
             "./config/packages/knpu_oauth2_client.yaml"
         ]
     },
-    "laminas/laminas-code": {
-        "version": "3.4.1"
-    },
     "laminas/laminas-eventmanager": {
         "version": "3.3.0"
     },
