@@ -137,7 +137,7 @@ class User implements UserInterface
 
 	/**
 	 * @var Collection|Stream[]
-	 * @ORM\OneToMany(targetEntity="App\Entity\Stream", mappedBy="authorId")
+	 * @ORM\OneToMany(targetEntity="App\Entity\Stream", mappedBy="author")
 	 */
 	protected $streams;
 
@@ -172,6 +172,7 @@ class User implements UserInterface
         $this->roles = [];
         $this->uuid = Uuid::uuid4();
         $this->posts = new ArrayCollection();
+        $this->streams = new ArrayCollection();
         $this->comments = new ArrayCollection();
     }
 
@@ -401,6 +402,18 @@ class User implements UserInterface
 
         return $this;
     }
+
+	public function getStreams(): Collection
+	{
+		return $this->streams;
+	}
+
+	public function setStreams($streams): self
+	{
+		$this->streams = $streams;
+
+		return $this;
+	}
 
     public function getComments(): Collection
     {
