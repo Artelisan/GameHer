@@ -9394,7 +9394,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3",
+        "php": "^7.1.33",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-intl": "*"
